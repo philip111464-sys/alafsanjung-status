@@ -1,0 +1,280 @@
+:root {
+  color: #13231b;
+  background: #f3f7f4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: #f3f7f4;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e8f2eb 0, #f7faf8 240px, #f3f7f4 100%);
+}
+
+.page-shell {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 64px 0 40px;
+}
+
+.page-header {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 8px;
+  color: #476354;
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0;
+  color: #173f2c;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.intro {
+  max-width: 620px;
+  margin: 18px 0 0;
+  color: #42574b;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.overall-card,
+.component-card,
+.incident-card {
+  border: 1px solid #cbd9cf;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 34px rgba(22, 56, 39, 0.07);
+}
+
+.overall-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px 24px;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 24px;
+}
+
+.overall-card h2,
+.section-heading h2 {
+  margin: 0;
+  color: #173f2c;
+  font-size: clamp(1.35rem, 4vw, 1.8rem);
+  line-height: 1.25;
+}
+
+.status-badge {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 7px 13px;
+  font-size: 0.85rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.status-operational {
+  border-color: #9cc9ae;
+  color: #165b36;
+  background: #e7f6ec;
+}
+
+.status-degraded {
+  border-color: #e2c46d;
+  color: #684b00;
+  background: #fff6d8;
+}
+
+.status-outage {
+  border-color: #e0a29b;
+  color: #7b1e19;
+  background: #fdebea;
+}
+
+.status-unknown {
+  border-color: #b8c1bc;
+  color: #45534b;
+  background: #eef1ef;
+}
+
+.status-notice,
+.checked-line {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #4d6156;
+  line-height: 1.55;
+}
+
+.status-notice[hidden] {
+  display: none;
+}
+
+.checked-line {
+  font-size: 0.9rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin: 0 0 14px;
+}
+
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.component-card {
+  min-width: 0;
+  padding: 20px;
+}
+
+.component-topline {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.component-card h3 {
+  min-width: 0;
+  margin: 3px 0 0;
+  color: #223c2e;
+  font-size: 1.06rem;
+  line-height: 1.35;
+}
+
+.component-meta {
+  margin: 18px 0 0;
+  color: #52665b;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.component-placeholder p,
+.empty-state {
+  margin: 10px 0 0;
+  color: #52665b;
+  line-height: 1.55;
+}
+
+.incident-list {
+  display: grid;
+  gap: 12px;
+}
+
+.incident-card {
+  padding: 18px 20px;
+}
+
+.incident-card h3 {
+  margin: 0;
+  color: #223c2e;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.incident-card p {
+  margin: 8px 0 0;
+  color: #52665b;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.empty-state {
+  border: 1px dashed #b7c9bd;
+  border-radius: 14px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+footer {
+  margin-top: 48px;
+  border-top: 1px solid #cfdbd2;
+  padding-top: 20px;
+  color: #5e7066;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .page-shell {
+    width: min(100% - 28px, 900px);
+    padding-top: 38px;
+  }
+
+  .overall-card {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 20px;
+  }
+
+  .overall-card .status-badge {
+    justify-self: start;
+  }
+
+  .component-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 430px) {
+  .page-shell {
+    width: min(100% - 24px, 900px);
+  }
+
+  .component-topline {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .component-topline .status-badge {
+    align-self: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

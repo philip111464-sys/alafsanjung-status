@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "targets": [
+    {
+      "id": "teacher-portal",
+      "label": "Teacher Portal",
+      "url": "https://teacher.alafsanjung-hub.com/",
+      "expectedStatuses": [200],
+      "expectedFinalUrl": "https://teacher.alafsanjung-hub.com/",
+      "expectedContentTypePrefix": "text/html"
+    },
+    {
+      "id": "public-site",
+      "label": "Public Site / Bookcase",
+      "url": "https://alafsanjung-hub.com/",
+      "expectedStatuses": [200],
+      "expectedFinalUrl": "https://alafsanjung-hub.com/",
+      "expectedContentTypePrefix": "text/html"
+    }
+  ]
+}

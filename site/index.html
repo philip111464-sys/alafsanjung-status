@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Alaf Sanjung Status</title>
+  <link rel="stylesheet" href="status.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Public availability</p>
+      <h1>Alaf Sanjung Status</h1>
+      <p class="intro">Automated checks show whether the Teacher Portal and public Bookcase can be reached.</p>
+    </header>
+
+    <section class="overall-card" aria-labelledby="overall-heading">
+      <div>
+        <p class="section-label">Current status</p>
+        <h2 id="overall-heading">Status information temporarily unavailable</h2>
+      </div>
+      <span id="overall-badge" class="status-badge status-unknown">Unknown</span>
+      <p id="status-notice" class="status-notice" role="status" aria-live="polite">Loading the latest automated check.</p>
+      <p class="checked-line">Last checked: <time id="generated-at">Unavailable</time></p>
+    </section>
+
+    <section aria-labelledby="components-heading">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Monitored services</p>
+          <h2 id="components-heading">Components</h2>
+        </div>
+      </div>
+      <div id="components" class="component-grid">
+        <article class="component-card component-placeholder">
+          <h3>Status information unavailable</h3>
+          <p>Component checks will appear when current status data is available.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="incidents-heading">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Recent history</p>
+          <h2 id="incidents-heading">Incidents</h2>
+        </div>
+      </div>
+      <div id="incidents" class="incident-list">
+        <p class="empty-state">Incident history is temporarily unavailable.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>This public page uses anonymous availability checks only. It does not test signed-in or administrative features.</p>
+    </footer>
+  </main>
+  <script src="status.js" defer></script>
+</body>
+</html>
